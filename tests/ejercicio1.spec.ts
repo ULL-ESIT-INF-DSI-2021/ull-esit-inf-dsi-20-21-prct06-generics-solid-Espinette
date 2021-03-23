@@ -9,7 +9,7 @@ describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
   const Squirtle: Pokemon = new Pokemon("Squirtle", 9, 0.5, "Agua", [48, 65, 43, 314], "Squidish!!!");
   const Seel: Pokemon = new Pokemon("Seel", 90, 1.1, "Agua", [45, 55, 45, 325], "Boomseel!!");
 
-  describe('Probar llamadas a un objeto de la clase Pokemon', () => {
+  describe('Probar llamadas a un objeto de la clase Pokemon hija de Fighter', () => {
     it('Bulbasaur.getNombre() returns value Bulbasur', () => {
       expect(Bulbasaur.getNombre()).to.be.equal(`Bulbasaur`);
     });

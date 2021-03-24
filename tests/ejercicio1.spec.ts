@@ -6,6 +6,7 @@ import {DC} from '../src/ejercicio-1/dc';
 import {StarWars} from '../src/ejercicio-1/starWars';
 import {DragonBall} from '../src/ejercicio-1/dragonBall';
 import {Marvel} from '../src/ejercicio-1/marvel';
+import {FighterCollection} from '../src/ejercicio-1/fighterColleccion';
 
 
 describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
@@ -22,7 +23,7 @@ describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
   const Joker: DC = new DC("Joker", 78, 1.73, "Villano", [35, 39, 25, 250], "JA JA JA JA");
   const SuperMan: DC = new DC("Super Man", 95, 1.85, "Krypton", [100, 95, 80, 750], "Por Asgard!!!!");
 
-
+  const BaseDeDatos = new FighterCollection([Bulbasaur, Vegeta, SuperMan, Thanos, Thor, DarthVader, Charmander, Squirtle, Joker, Seel, Luke]);
   describe('Probar llamadas a un objeto de la clase Pokemon hija de Fighter', () => {
     it('Bulbasaur.getNombre() returns value Bulbasur', () => {
       expect(Bulbasaur.getNombre()).to.be.equal(`Bulbasaur`);
@@ -76,6 +77,27 @@ describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
 
     it('Crear un objeto del universo Star Wars', () => {
       expect(Luke).to.not.be.equal(null);
+    });
+  });
+
+  describe('Probar funcionamiento clase FighterCollection', () => {
+    it('Crear un objeto de FighterCollection', () => {
+      expect(BaseDeDatos).to.not.be.equal(null);
+    });
+
+    describe('Añadimos a Goku a la Base de datos', () => {
+      it('Lo buscamos primero y se espera que no se encuentre', () => {
+        expect(BaseDeDatos.findFighter(Goku)).to.be.equal('No se encuentra al personaje en la base de datos');
+      });
+
+      it('Lo añadimos y se espera que se encuentre', () => {
+        BaseDeDatos.addFighter(Goku);
+        expect(BaseDeDatos.findFighter(Goku)).to.be.equal('Goku se ha encontrado en la posicion 11');
+      });
+    });
+
+    it('Mostramos la coleccion', () => {
+      BaseDeDatos.mostrarPersonajes();
     });
   });
 });

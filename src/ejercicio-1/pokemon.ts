@@ -4,6 +4,7 @@ import {Fighter} from "./fighter";
  * Clase Pokemon contiene los datos que debe recibir un objeto tipo pokemon
  */
 export class Pokemon extends Fighter {
+  private readonly universo: string = "Pokemon";
   /**
    * Constructor de la clase
    * @param nombre Nombre del pokemon
@@ -14,5 +15,9 @@ export class Pokemon extends Fighter {
    */
   constructor(nombre: string, peso: number, altura: number, tipo: string, datosBasicos: number[], coletilla: string) {
     super(nombre, peso, altura, tipo, datosBasicos, coletilla);
+  }
+
+  public get getUniverso() {
+    return this.universo;
   }
 }

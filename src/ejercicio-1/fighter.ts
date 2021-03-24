@@ -13,11 +13,12 @@ export abstract class Fighter {
   }
   /**
    * Constructor de la clase
-   * @param nombre Nombre del pokemon
-   * @param peso Peso del pokemon
-   * @param altura Altura del pokemon
-   * @param tipo Tipo del pokemon
+   * @param nombre Nombre del individuo
+   * @param peso Peso del individuo
+   * @param altura Altura del individuo
+   * @param tipo Tipo del individuo
    * @param datosBasicos Vector de tam 4 que contiene poder de ataque, defensa, velocidad y hp
+   * @param coletilla Frase que dice al dar un golpe
    */
   constructor(protected nombre: string, protected peso: number, protected altura: number, protected tipo: string, datosBasicos: number[], protected coletilla: string) {
     this.nombre = nombre;
@@ -33,7 +34,7 @@ export abstract class Fighter {
 
   /**
    * Funcion getNombre()
-   * @returns Nombre del pokemon
+   * @returns Nombre del individuo
    */
   public getNombre() {
     return this.nombre;
@@ -49,7 +50,7 @@ export abstract class Fighter {
 
   /**
    * Funcion getAltura()
-   * @returns Altura del pokemon
+   * @returns Altura del individuo
    */
   public getAltura() {
     return this.altura;
@@ -57,7 +58,7 @@ export abstract class Fighter {
 
   /**
    * Funcion getTipo()
-   * @returns Tipo del pokemon
+   * @returns Tipo del individuo
    */
   public getTipo() {
     return this.tipo;
@@ -77,9 +78,11 @@ export abstract class Fighter {
 
   /**
    * Funcion setHp()
-   * @param vida Establece la vida restante del pokemon
+   * @param vida Establece la vida restante del individuo
    */
   public setHp(vida: number) {
     this.datosBasicos.hp = vida;
   }
+
+  public abstract get getUniverso(): string;
 }

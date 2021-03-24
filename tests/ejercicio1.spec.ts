@@ -2,12 +2,26 @@
 import 'mocha';
 import {expect} from 'chai';
 import {Pokemon} from '../src/ejercicio-1/pokemon';
+import {DC} from '../src/ejercicio-1/dc';
+import {StarWars} from '../src/ejercicio-1/starWars';
+import {DragonBall} from '../src/ejercicio-1/dragonBall';
+import {Marvel} from '../src/ejercicio-1/marvel';
+
 
 describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
   const Bulbasaur: Pokemon = new Pokemon("Bulbasaur", 6.9, 0.7, "Hierba", [49, 49, 45, 318], "Bulba Bulba!!");
   const Charmander: Pokemon = new Pokemon("Charmander", 8.5, 0.6, "Fuego", [52, 43, 65, 309], "Fire!!");
   const Squirtle: Pokemon = new Pokemon("Squirtle", 9, 0.5, "Agua", [48, 65, 43, 314], "Squidish!!!");
   const Seel: Pokemon = new Pokemon("Seel", 90, 1.1, "Agua", [45, 55, 45, 325], "Boomseel!!");
+  const Luke: StarWars = new StarWars("Luke", 58, 1.75, "Jedi", [57, 47, 35, 400], "Que la fuerza este contigo");
+  const DarthVader: StarWars = new StarWars("Darth Vader", 70, 1.82, "Sith", [70, 55, 29, 285], "Yo soy tu padre");
+  const Thanos: Marvel = new Marvel("Thanos", 448, 2.62, "Villano", [110, 80, 55, 1000], "Yo soy inebitable");
+  const Goku: DragonBall = new DragonBall("Goku", 62, 1.75, "Heroe", [85, 62, 57, 600], "Todos confian en mi, no puedo perder ahora");
+  const Vegeta: DragonBall = new DragonBall("Vegeta", 56, 1.64, "Heroe", [83, 68, 49, 550], "Toma esta!!!");
+  const Thor: Marvel = new Marvel("Thor", 98, 1.90, "Vengador", [95, 62, 58, 520], "Por Asgard!!!!");
+  const Joker: DC = new DC("Joker", 78, 1.73, "Villano", [35, 39, 25, 250], "JA JA JA JA");
+  const SuperMan: DC = new DC("Super Man", 95, 1.85, "Krypton", [100, 95, 80, 750], "Por Asgard!!!!");
+
 
   describe('Probar llamadas a un objeto de la clase Pokemon hija de Fighter', () => {
     it('Bulbasaur.getNombre() returns value Bulbasur', () => {
@@ -44,6 +58,24 @@ describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
 
     it('Bulbasaur.getColetilla() returns value Bulba Bulba!!', () => {
       expect(Bulbasaur.getColetilla()).to.be.equal("Bulba Bulba!!");
+    });
+  });
+
+  describe('Probar llamadas al resto de clases de otros universos', () => {
+    it('Crear un objeto del universo Marvel', () => {
+      expect(Thanos).to.not.be.equal(null);
+    });
+
+    it('Crear un objeto del universo DC', () => {
+      expect(SuperMan).to.not.be.equal(null);
+    });
+
+    it('Crear un objeto del universo Dragon Ball', () => {
+      expect(Goku).to.not.be.equal(null);
+    });
+
+    it('Crear un objeto del universo Star Wars', () => {
+      expect(Luke).to.not.be.equal(null);
     });
   });
 });

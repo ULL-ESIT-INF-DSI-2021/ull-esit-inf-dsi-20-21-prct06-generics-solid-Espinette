@@ -8,7 +8,15 @@
     "./src/ejercicio-1/starWars.ts",
     "./src/ejercicio-1/mostrarFighterColleccion.ts",
     "./src/ejercicio-1/fighterColleccion.ts",
-    "./src/ejercicio-1/fighter.ts"
+    "./src/ejercicio-1/fighter.ts",
+    "./src/ejercicio-2/fuerza.ts",
+    "./src/ejercicio-2/isConvertable.ts",
+    "./src/ejercicio-2/longitud.ts",
+    "./src/ejercicio-2/masa.ts",
+    "./src/ejercicio-2/temperatura.ts",
+    "./src/ejercicio-2/tiempo.ts",
+    "./src/ejercicio-2/velocidad.ts",
+    "./src/ejercicio-2/volumen.ts"
 
   ],
   "out": "./docs"

@@ -10,32 +10,23 @@ export class FighterCollection {
   }
 
   /**
-   * Función getPokedex()
-   * @returns Retorna la pokedex entera
+   * Función getPersonajes()
+   * @returns Retorna los personajes entera
    */
   public getPersonajes() {
     return this.baseDatos;
   }
 
   /**
-   * Funcion setFighter()
+   * Funcion addFighter()
    * @param Fighter Fighter a introducir en la pokedex
    */
   public addFighter(fighter: Fighter) {
     this.baseDatos.push(fighter);
   }
 
-  /* public getByNombre(nombreFighter: string) {
-    this.baseDatos.forEach((personaje) => {
-      if (personaje.getNombre() == nombreFighter) {
-        return personaje;
-      }
-    });
-    return "No se encuentra dicho personaje";
-  }*/
-
   /**
-   * Funcion finFighter()
+   * Funcion findFighter()
    * @param Fighter Fighter a buscar en la pokedex
    * @returns El Fighter con sus datos
    */
@@ -50,12 +41,5 @@ export class FighterCollection {
       return 'No se encuentra al personaje en la base de datos';
     }
     return `${this.baseDatos[pos].getNombre()} se ha encontrado en la posicion ${pos}`;
-  }
-
-  /**
-   * Funcion para mostrar la pokedex
-   */
-  public mostrarPersonajes() {
-    console.table(this.baseDatos, ["nombre", "peso", "altura", "tipo", "coletilla"]);
   }
 }

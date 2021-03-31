@@ -7,6 +7,8 @@ import {StarWars} from '../src/ejercicio-1/starWars';
 import {DragonBall} from '../src/ejercicio-1/dragonBall';
 import {Marvel} from '../src/ejercicio-1/marvel';
 import {FighterCollection} from '../src/ejercicio-1/fighterColleccion';
+import {MostrarFighterCollection} from '../src/ejercicio-1/mostrarFighterColleccion';
+import {Combat} from '../src/ejercicio-1/combat';
 
 
 describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
@@ -21,9 +23,10 @@ describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
   const Vegeta: DragonBall = new DragonBall("Vegeta", 56, 1.64, "Heroe", [83, 68, 49, 550], "Toma esta!!!");
   const Thor: Marvel = new Marvel("Thor", 98, 1.90, "Vengador", [95, 62, 58, 520], "Por Asgard!!!!");
   const Joker: DC = new DC("Joker", 78, 1.73, "Villano", [35, 39, 25, 250], "JA JA JA JA");
-  const SuperMan: DC = new DC("Super Man", 95, 1.85, "Krypton", [100, 95, 80, 750], "Por Asgard!!!!");
+  const SuperMan: DC = new DC("Super Man", 95, 1.85, "Krypton", [100, 95, 80, 750], "Yo soy SUPERMAN");
 
   const BaseDeDatos = new FighterCollection([Bulbasaur, Vegeta, SuperMan, Thanos, Thor, DarthVader, Charmander, Squirtle, Joker, Seel, Luke]);
+  const BaseDeDatosPrint = new MostrarFighterCollection(BaseDeDatos);
   describe('Probar llamadas a un objeto de la clase Pokemon hija de Fighter', () => {
     it('Bulbasaur.getNombre() returns value Bulbasur', () => {
       expect(Bulbasaur.getNombre()).to.be.equal(`Bulbasaur`);
@@ -95,9 +98,21 @@ describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
         expect(BaseDeDatos.findFighter(Goku)).to.be.equal('Goku se ha encontrado en la posicion 11');
       });
     });
+    describe('Clase exclusiva para imprimir la base de datos', () => {
+      it('Mostramos la colección', () => {
+        BaseDeDatosPrint.mostrarPersonajes();
+      });
+    });
+  });
 
-    it('Mostramos la coleccion', () => {
-      BaseDeDatos.mostrarPersonajes();
+  describe('Probar funcionamiento clase Combate', () => {
+    it('Comabte entre Superman y Thor', () => {
+      const combat1 = new Combat(SuperMan, Thor);
+      combat1.start();
+    });
+    it('Comabte entre Bulbasaur y Goku', () => {
+      const combat1 = new Combat(Bulbasaur, Goku);
+      combat1.start();
     });
   });
 });

@@ -1,6 +1,15 @@
 {
   "entryPoints": [
-    "./src/index.ts"
+    "./src/ejercicio-1/combat.ts",
+    "./src/ejercicio-1/dc.ts",
+    "./src/ejercicio-1/dragonBall.ts",
+    "./src/ejercicio-1/marvel.ts",
+    "./src/ejercicio-1/pokemon.ts",
+    "./src/ejercicio-1/starWars.ts",
+    "./src/ejercicio-1/mostrarFighterColleccion.ts",
+    "./src/ejercicio-1/fighterColleccion.ts",
+    "./src/ejercicio-1/fighter.ts"
+
   ],
   "out": "./docs"
 }

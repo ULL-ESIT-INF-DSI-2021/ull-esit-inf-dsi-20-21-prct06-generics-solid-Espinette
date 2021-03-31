@@ -2,7 +2,7 @@
  * Interfaz generica para la conversión
  */
 
-export interface isConvertible<T> {
+export interface isConvertable<T> {
   cantidad: number;
   unidadActual: T;
   unidadNueva: T;
@@ -10,5 +10,5 @@ export interface isConvertible<T> {
   /**
    * Funcion para la conversion de unidades
   */
-  conversor(): string;
+  conversor(): number;
 }

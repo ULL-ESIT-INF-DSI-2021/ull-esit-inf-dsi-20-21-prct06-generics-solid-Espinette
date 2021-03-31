@@ -51,14 +51,41 @@ Para crear el proyecto primero debemos realizar un git clone, de la estructura d
 
          Esta clase tendrá como parámetros dos luchadores diferentes, los cuales se prestarán a hacer una simulación de combate. Para poder ver quien gana el combate, primero tendremos que ver el daño que le hace un luchador a otro, para esto hacemos uso del método dañoFighter() el cual, según el tipo de luchador que sea y a que universo pertenezca, verá la eficacia que le hace a su adversario. Esto lo hemos hecho con un switch cuyo objetivo es analizar el universo de ambos luchadores y le daremos un valor a la eficacia. Esta función tiene como resultado algo parecido a lo realizado en la P5.
 
-Por último tenemos el método start() este método es el principal de la clase, ya que es el que simula el combate, cuando el combate empiece, y mientas alguno de los dos luchadores tengan más de 0 de HP, seguirá el combate, lo que hace nuestro método es que según el luchador que ataque, se le hará un daño al adversario que le restará vida. Cuando uno de los dos luchadores tenga la vida inferior o igual a 0 se decidirá el ganador del combate, además en cada turno el personaje que ataca dirá una coletilla ya que se nos lo pide en el enunciado.
+Por último tenemos el método start() este método es el principal de la clase, ya que es el que simula el combate, cuando el combate empiece, y mientas alguno de los dos luchadores tengan más de 0 de HP, seguirá el combate, lo que hace nuestro método es que según el luchador que ataque, se le hará un daño al adversario que le restará vida. Cuando uno de los dos luchadores tenga la vida inferior o igual a 0 se decidirá el ganador del combate, además en cada turno el personaje que ataca dirá una coletilla ya que se nos lo pide en el enunciado. La clase desarrollada se encuentra [aquí](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-1/combat.ts) 
 
 
    ___Las pruebas realizadas para este ejercicio fueron:___
     
-   ![Ejercicio1Funcion](Imagenes/Prueba1.JPG) 
+   ![Ejercicio1Funcion](imagenes/Prueba1.JPG) 
+   ![Ejercicio1Funcion](imagenes/Prueba1a.JPG) 
 
-       
+### Ejercicio 2 - Conversor de unidades
+
+ - ___Carpeta con el código resuelto___ = [Solución](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/tree/master/src/ejercicio-2)
+ 
+ - ___Fichero con las pruebas___ = [Pruebas](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/tests/ejercicio2.spec.ts)
+
+ - ___Explicación de cada clase___
+     
+   1. ___Interfaz isConvertable___: 
+     
+         La interfaz isConvertible tenemos los datos que le van a entrar a nuestras clases, cuando implementemos dicha interfaz, que son, la cantidad a evaluar, la medida actual y la medida de la que queremos cambiar. Además, de tener nuestra función principal que va a ser una función que nos retorne un tipo number con el valor ya cambiado. La interfaz se encuentra [aqui](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-2/isConvertable.ts)
+     
+   2. ___Clases de tipos de medidas___:
+
+         En esta grupo de clase se le incluirá nuestra interfaz isConvertible, podemos observar un tipo nombrado de dsitinta forma en cada clase, el cual nos va a proporcionar las unidades que podemos convertir. Tenemos el constructor de la clase, el cual implementa la interfaz genérica que nombramos antes y finalmente nuestra función principal llamada conversor. Esta función, lo que hace es que según nosotros le pasemos a nuestros atributos unidadActual y unidadNueva pues tendremos un switch que nos retornará un valor u otro, ya que dependiendo de la conversión, la operación es un tanto diferente. Las distintas clases son:
+         
+         a. [Velocidad](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-2/velocidad.ts)
+         b. [Temperatura](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-2/temperatura.ts)
+         c. [Tiempo](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-2/tiempo.ts)
+         d. [Longitud](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-2/longitud.ts)
+         e. [Masa](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-2/masa.ts)
+         f. [Volumen](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-2/volumen.ts)
+         g. [Fuerza](https://github.com/ULL-ESIT-INF-DSI-2021/ull-esit-inf-dsi-20-21-prct06-generics-solid-Espinette/blob/master/src/ejercicio-2/fuerza.ts)
+        
+ ___Las pruebas realizadas para este ejercicio fueron:___
+    
+   ![Ejercicio1Funcion](imagenes/Prueba2.JPG) 
      
 
          

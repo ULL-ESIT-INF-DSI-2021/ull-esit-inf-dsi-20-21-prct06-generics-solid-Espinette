@@ -106,13 +106,17 @@ describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
   });
 
   describe('Probar funcionamiento clase Combate', () => {
+    const combat1 = new Combat(SuperMan, Thor);
+    const combat2 = new Combat(Bulbasaur, Goku);
+
+    it('LLamada para obtener luchadores correctamente se espera Los contricantes son Super Man y Thor', () => {
+      expect(combat1.getCombate()).to.be.equal('Los contricantes son Super Man y Thor');
+    });
     it('Comabte entre Superman y Thor', () => {
-      const combat1 = new Combat(SuperMan, Thor);
       combat1.start();
     });
     it('Comabte entre Bulbasaur y Goku', () => {
-      const combat1 = new Combat(Bulbasaur, Goku);
-      combat1.start();
+      combat2.start();
     });
   });
 });

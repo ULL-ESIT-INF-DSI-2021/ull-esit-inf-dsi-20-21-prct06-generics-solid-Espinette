@@ -1,4 +1,4 @@
-import 'mocha';
+/* import 'mocha';
 import {expect} from 'chai';
 import {Velocidad} from '../src/ejercicio-2/velocidad';
 import {Masa} from '../src/ejercicio-2/masa';
@@ -87,4 +87,4 @@ describe(`EJERCICIO 2 - CONVERSOR DE UNIDADES`, () => {
       expect(volumen2.conversor()).to.be.equal(1000.1398);
     });
   });
-});
+}); */

@@ -1,5 +1,5 @@
 
-import 'mocha';
+/* import 'mocha';
 import {expect} from 'chai';
 import {Pokemon} from '../src/ejercicio-1/pokemon';
 import {DC} from '../src/ejercicio-1/dc';
@@ -11,7 +11,7 @@ import {MostrarFighterCollection} from '../src/ejercicio-1/mostrarFighterCollecc
 import {Combat} from '../src/ejercicio-1/combat';
 
 
-describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
+  describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
   const Bulbasaur: Pokemon = new Pokemon("Bulbasaur", 6.9, 0.7, "Hierba", [49, 49, 45, 318], "Bulba Bulba!!");
   const Charmander: Pokemon = new Pokemon("Charmander", 8.5, 0.6, "Fuego", [52, 43, 65, 309], "Fire!!");
   const Squirtle: Pokemon = new Pokemon("Squirtle", 9, 0.5, "Agua", [48, 65, 43, 314], "Squidish!!!");
@@ -119,4 +119,4 @@ describe(`EJERCICIO 1 - EL COMBATE DEFINITIVO`, () => {
       combat2.start();
     });
   });
-});
+}); */

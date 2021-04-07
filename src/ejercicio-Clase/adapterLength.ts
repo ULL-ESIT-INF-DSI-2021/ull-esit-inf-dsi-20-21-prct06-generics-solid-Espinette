@@ -6,7 +6,7 @@ export class AdapterLenght extends MetricLenght {
    * Constructor que recibe una unidad tipo imperial
    * @param unidad llama al constructor de la clase metriclenght
    */
-  constructor(unidad: ImperialLenght) {
+  constructor(protected unidad: ImperialLenght) {
     super(unidad.getLenghtByMillas());
   }
 
@@ -15,7 +15,7 @@ export class AdapterLenght extends MetricLenght {
    * @returns Centimetros
    */
   getLenghtByCentimetros() {
-    return this.unidad * 160934;
+    return this.unidad.getLenghtByMillas() * 160934;
   }
 
   /**
@@ -23,7 +23,7 @@ export class AdapterLenght extends MetricLenght {
    * @returns metros
    */
   getLenghtByMetros() {
-    return this.unidad * 1609.34;
+    return this.unidad.getLenghtByMillas() * 1609.34;
   }
 
   /**
@@ -31,6 +31,6 @@ export class AdapterLenght extends MetricLenght {
    * @returns kilometros
    */
   getLenghtByKilometros() {
-    return this.unidad * 1.60934;
+    return this.unidad.getLenghtByMillas() * 1.60934;
   }
 }

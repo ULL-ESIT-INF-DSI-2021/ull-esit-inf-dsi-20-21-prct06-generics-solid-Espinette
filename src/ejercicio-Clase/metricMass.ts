@@ -1,9 +1,9 @@
-export class MetricLenght {
+export class MetricMass {
   /**
    * Constructor que recibe un valor numerico en kilometros
    * @param unidad kilometros recibidas
    */
-  constructor(public unidad: number ) {
+  constructor(protected unidad: number) {
     this.unidad = unidad;
   }
 
@@ -11,7 +11,7 @@ export class MetricLenght {
    * Funcion para obtener la cantidad de metros que corresponde las kilometros
    * @returns unidad * 1000
    */
-  getLenghtByMetros() {
+  getMassByMetros() {
     return this.unidad * 1000;
   }
 
@@ -19,7 +19,7 @@ export class MetricLenght {
    * Funcion para obtener la cantidad de kilometros
    * @returns unidad
    */
-  getLenghtByKilometros() {
+  getMassByKilometros() {
     return this.unidad;
   }
 
@@ -27,7 +27,7 @@ export class MetricLenght {
    * Funcion para obtener la cantidad de Centimetros que corresponde las kilometros
    * @returns unidad * 100000
    */
-  getLenghtByCentimetros() {
+  getMassByCentimetros() {
     return this.unidad * 100000;
   }
 }

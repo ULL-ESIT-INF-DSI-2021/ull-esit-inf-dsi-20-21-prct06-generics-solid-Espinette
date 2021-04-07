@@ -2,7 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {ImperialLenght} from "../src/ejercicio-Clase/imperialLength";
 import {MetricLenght} from "../src/ejercicio-Clase/metricLength";
-import {AdapterLenght} from "../src/ejercicio-Clase/adapter";
+import {AdapterLenght} from "../src/ejercicio-Clase/adapterLength";
 
 
 describe(`EJERCICIO CLASE`, () => {
